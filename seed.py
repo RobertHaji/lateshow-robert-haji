@@ -1,4 +1,5 @@
 import random
+from flask_sqlalchemy import SQLAlchemy
 from model import db, Episode, Guest, Appearance
 from app import app
 

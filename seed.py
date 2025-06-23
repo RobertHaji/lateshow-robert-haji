@@ -10,7 +10,7 @@ guest_data = [
     ("1/13/99", "television actress", "Tracey Ullman"),
     ("1/14/99", "film actress", "Gillian Anderson"),
     ("2/10/99", "actress", "Pamela Anderson, Natalie Raitano, Molly Culver"),
-    # ⬆️ Add the rest of your data here in the same format
+    # Add the rest of your data here in the same format
 ]
 
 

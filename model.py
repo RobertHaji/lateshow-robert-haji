@@ -61,3 +61,10 @@ class Appearance(db.Model, SerializerMixin):
 
     episode = db.relationship("Episode", back_populates="appearances")
     guest = db.relationship("Guest", back_populates="appearances")
+
+    # Add validation logic to our Appearance i.e the rating
+    @db.validates("rating")
+    def validate_rating(self, key, rating):
+        if rating < 1 or rating > 5:
+            raise ValueError("Rating must be between 1 and 5 (inclusive).")
+        return rating

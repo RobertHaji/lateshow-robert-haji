@@ -3,6 +3,7 @@ from flask_migrate import Migrate
 from flask_restful import Api
 from model import db
 from resources.episodes import EpisodeResource
+from resources.guests import GuestResource
 
 # Initialize the Flask Application
 
@@ -24,6 +25,9 @@ api = Api(app)
 
 # Get all episodes and by the Id
 api.add_resource(EpisodeResource, "/episodes", "/episodes/<int:id>")
+
+# Get all episodes and by the Id
+api.add_resource(GuestResource, "/guests")
 
 
 if __name__ == "__main__":
